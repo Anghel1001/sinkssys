@@ -167,7 +167,23 @@
         function showModal(name, jobTitle, department, email, address, phone) {
             document.getElementById('modalNameContent').textContent = name;
             document.getElementById('modalJobTitle').textContent = jobTitle;
+            document.getElementById('modalDepartment').textContent = department;
+            document.getElementById('modalEmail').textContent = email;
+            document.getElementById('modalPhone').textContent = phone;
+            document.getElementById('modalAddress').textContent = address;
+
+            document.getElementById('employeeModal').classList.remove('hidden');
         }
+
+        // Close the employee modal
+        function closeModal() {
+            document.getElementById('employeeModal').classList.add('hidden');
+        }
+
+        // Trigger fade-in animation for the employee list on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('employeeTableBody').style.opacity = 1;
+        });
 
     </script>
 </body>
