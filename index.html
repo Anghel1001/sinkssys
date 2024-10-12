@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +16,6 @@
         }
     </style>
 </head>
-
 <body class="bg-gray-50">
     <!-- Login Page -->
     <div id="loginPage" class="h-screen flex items-center justify-center">
@@ -40,10 +38,10 @@
     <!-- Employee List Page (Hidden by default) -->
     <div id="employeeListPage" class="hidden p-6">
         <div class="max-w-6xl mx-auto">
-            <h1 class="text-3xl font-bold text-center mb-6 text-indigo-600">Employee List</h1>
+            <h1 class="text-3xl font-bold text-center mb-6">Employee List</h1>
             <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
                 <thead>
-                    <tr class="bg-indigo-600 text-white text-left">
+                    <tr class="bg-gray-800 text-white text-left">
                         <th class="py-3 px-4">Name</th>
                         <th class="py-3 px-4">Job Title</th>
                         <th class="py-3 px-4">Department</th>
@@ -87,12 +85,12 @@
                         </td>
                     </tr>
                     <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
-                        <td class="py-3 px-4">Jess Diassan</td>
+                        <td class="py-3 px-4">Jesslee Diassan</td>
                         <td class="py-3 px-4">Web Developer</td>
                         <td class="py-3 px-4">IT</td>
                         <td class="py-3 px-4">jess.diassan@gmail.com</td>
                         <td class="py-3 px-4">
-                            <button onclick="showModal('Jess Diassan', 'Web Developer', 'IT', 'jess.diassan@gmail.com', 'Baguio City, Benguet', '09546892357')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
+                            <button onclick="showModal('Jesslee Diassan', 'Web Developer', 'IT', 'jess.diassan@gmail.com', 'Baguio City, Benguet', '09546892357')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
                                 View Details
                             </button>
                         </td>
@@ -111,19 +109,19 @@
                 </tbody>
             </table>
         </div>
+    </div>
 
-        <!-- Modal -->
-        <div id="employeeModal" class="fixed inset-0 hidden items-center justify-center bg-gray-800 bg-opacity-50">
-            <div class="bg-white rounded-lg p-6 max-w-sm w-full">
-                <h2 class="text-xl font-semibold text-indigo-600 mb-4" id="modalName">Employee Information</h2>
-                <p><strong>Name:</strong> <span id="modalNameContent"></span></p>
-                <p><strong>Job Title:</strong> <span id="modalJobTitle"></span></p>
-                <p><strong>Department:</strong> <span id="modalDepartment"></span></p>
-                <p><strong>Email:</strong> <span id="modalEmail"></span></p>
-                <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
-                <p><strong>Address:</strong> <span id="modalAddress"></span></p>
-                <button onclick="closeModal()" class="block mt-4 bg-red-500 text-white text-center px-4 py-2 rounded hover:bg-red-600">Close</button>
-            </div>
+    <!-- Modal -->
+    <div id="employeeModal" class="fixed inset-0 hidden items-center justify-center bg-gray-800 bg-opacity-50">
+        <div class="bg-white rounded-lg p-6 max-w-sm w-full">
+            <h2 class="text-lg font-bold" id="modalName">Employee Information</h2>
+            <p><strong>Name:</strong> <span id="modalNameContent"></span></p>
+            <p><strong>Job Title:</strong> <span id="modalJobTitle"></span></p>
+            <p><strong>Department:</strong> <span id="modalDepartment"></span></p>
+            <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+            <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+            <button onclick="closeModal()" class="block mt-4 bg-red-500 text-white text-center px-4 py-2 rounded hover:bg-red-600">Close</button>
         </div>
     </div>
 
@@ -152,18 +150,20 @@
             document.getElementById('modalJobTitle').textContent = jobTitle;
             document.getElementById('modalDepartment').textContent = department;
             document.getElementById('modalEmail').textContent = email;
-            document.getElementById('modalPhone').textContent = phone;
             document.getElementById('modalAddress').textContent = address;
-
-            // Show the modal
+            document.getElementById('modalPhone').textContent = phone;
             document.getElementById('employeeModal').classList.add('active');
         }
 
-        // Hide employee modal
+        // Close employee modal
         function closeModal() {
             document.getElementById('employeeModal').classList.remove('active');
         }
+
+        // Add opacity transition to employee list
+        window.onload = function() {
+            document.getElementById('employeeTableBody').classList.add('opacity-100');
+        }
     </script>
 </body>
-
 </html>
