@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,19 +17,12 @@
         }
     </style>
 </head>
-<<<<<<< Updated upstream
-<body>
-        <h1>Welcome to Sinkssys</h1>
-        <div>Commit in dev 2 branch</div>
-        <div> another update try</div>
-</body>
-</html>
-=======
-<body class="bg-gray-100">
+
+<body class="bg-gray-50">
     <!-- Login Page -->
     <div id="loginPage" class="h-screen flex items-center justify-center">
         <div class="bg-white shadow-md rounded-lg p-8 max-w-sm w-full">
-            <h1 class="text-2xl font-bold text-center mb-6">Login to Sinkssys</h1>
+            <h1 class="text-3xl font-semibold text-center mb-6 text-indigo-600">Login to Sinkssys</h1>
             <form id="loginForm" onsubmit="return loginRedirect(event)">
                 <div class="mb-4">
                     <label for="username" class="block text-gray-700 font-medium">Username</label>
@@ -38,101 +32,90 @@
                     <label for="password" class="block text-gray-700 font-medium">Password</label>
                     <input type="password" id="password" class="border rounded-lg w-full py-2 px-3" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">Login</button>
+                <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 w-full">Login</button>
             </form>
         </div>
     </div>
 
     <!-- Employee List Page (Hidden by default) -->
-<div id="employeeListPage" class="hidden p-6">
-    <div class="max-w-6xl mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-6">Employee List</h1>
-        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-            <thead>
-                <tr class="bg-gray-800 text-white text-left">
-                    <th class="py-3 px-4">Name</th>
-                    <th class="py-3 px-4">Job Title</th>
-                    <th class="py-3 px-4">Department</th>
-                    <th class="py-3 px-4">Email</th>
-                    <th class="py-3 px-4">Action</th>
-                </tr>
-            </thead>
-            <tbody id="employeeTableBody" class="text-gray-700 opacity-0 transition-opacity duration-700">
-                <!-- Example rows -->
-                <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
-                    <td class="py-3 px-4">James Avila</td>
-                    <td class="py-3 px-4">Software Engineer</td>
-                    <td class="py-3 px-4">IT</td>
-                    <td class="py-3 px-4">jamesavila@gmail.com</td>
-                    <td class="py-3 px-4">
-                        <button 
-                            onclick="showModal('James Avila', 'Software Engineer', 'IT', 'jamesavila@gmail.com', 'Bauang, La Union', '09081177469')" 
-                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
-                            View Details
-                        </button>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
-                    <td class="py-3 px-4">Sea Chua</td>
-                    <td class="py-3 px-4">HR Manager</td>
-                    <td class="py-3 px-4">HR</td>
-                    <td class="py-3 px-4">sea.chua@gmail.com</td>
-                    <td class="py-3 px-4">
-                        <button 
-                            onclick="showModal('Sea Chua', 'HR Manager', 'HR', 'sea.chua@gmail.com', 'Baguio City, Benguet', '09273866918')" 
-                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
-                            View Details
-                        </button>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
-                    <td class="py-3 px-4">Alfie Gumabay</td>
-                    <td class="py-3 px-4">Web Developer</td>
-                    <td class="py-3 px-4">IT</td>
-                    <td class="py-3 px-4">alfie.gumabay@gmail.com</td>
-                    <td class="py-3 px-4">
-                        <button 
-                            onclick="showModal('Alfie Gumabay', 'Web Developer', 'IT', 'alfie.gumabay@gmail.com', 'Tuguegarao, Cagayan Valley', '09674267112')" 
-                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
-                            View Details
-                        </button>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
-                    <td class="py-3 px-4">Jesslee Diassan</td>
-                    <td class="py-3 px-4">Web Developer</td>
-                    <td class="py-3 px-4">IT</td>
-                    <td class="py-3 px-4">jess.diassan@gmail.com</td>
-                    <td class="py-3 px-4">
-                        <button 
-                            onclick="showModal('Jesslee Diassan', 'Web Developer', 'IT', 'jess.diassan@gmail.com', 'Baguio City, Benguet', '09546892357')" 
-                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
-                            View Details
-                        </button>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
-                    <td class="py-3 px-4">Rhyzelle Salvador</td>
-                    <td class="py-3 px-4">Web Developer</td>
-                    <td class="py-3 px-4">IT</td>
-                    <td class="py-3 px-4">rhyzelle.salvador@gmail.com</td>
-                    <td class="py-3 px-4">
-                        <button 
-                            onclick="showModal('Rhyzelle Salvador', 'Web Developer', 'IT', 'rhyzelle.salvador@gmail.com', 'Laoag City, Ilocos Norte', '0981235691')" 
-                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
-                            View Details
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+    <div id="employeeListPage" class="hidden p-6">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-3xl font-bold text-center mb-6 text-indigo-600">Employee List</h1>
+            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <thead>
+                    <tr class="bg-indigo-600 text-white text-left">
+                        <th class="py-3 px-4">Name</th>
+                        <th class="py-3 px-4">Job Title</th>
+                        <th class="py-3 px-4">Department</th>
+                        <th class="py-3 px-4">Email</th>
+                        <th class="py-3 px-4">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody" class="text-gray-700 opacity-0 transition-opacity duration-700">
+                    <!-- Example rows -->
+                    <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <td class="py-3 px-4">James Avila</td>
+                        <td class="py-3 px-4">Software Engineer</td>
+                        <td class="py-3 px-4">IT</td>
+                        <td class="py-3 px-4">jamesavila@gmail.com</td>
+                        <td class="py-3 px-4">
+                            <button onclick="showModal('James Avila', 'Software Engineer', 'IT', 'jamesavila@gmail.com', 'Bauang, La Union', '09081177469')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <td class="py-3 px-4">Sea Chua</td>
+                        <td class="py-3 px-4">HR Manager</td>
+                        <td class="py-3 px-4">HR</td>
+                        <td class="py-3 px-4">sea.chua@gmail.com</td>
+                        <td class="py-3 px-4">
+                            <button onclick="showModal('Sea Chua', 'HR Manager', 'HR', 'sea.chua@gmail.com', 'Baguio City, Benguet', '09273866918')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <td class="py-3 px-4">Alfie Gumabay</td>
+                        <td class="py-3 px-4">Web Developer</td>
+                        <td class="py-3 px-4">IT</td>
+                        <td class="py-3 px-4">alfie.gumabay@gmail.com</td>
+                        <td class="py-3 px-4">
+                            <button onclick="showModal('Alfie Gumabay', 'Web Developer', 'IT', 'alfie.gumabay@gmail.com', 'Tuguegarao, Cagayan Valley', '09674267112')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <td class="py-3 px-4">Jess Diassan</td>
+                        <td class="py-3 px-4">Web Developer</td>
+                        <td class="py-3 px-4">IT</td>
+                        <td class="py-3 px-4">jess.diassan@gmail.com</td>
+                        <td class="py-3 px-4">
+                            <button onclick="showModal('Jess Diassan', 'Web Developer', 'IT', 'jess.diassan@gmail.com', 'Baguio City, Benguet', '09546892357')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <td class="py-3 px-4">Rhyzelle Salvador</td>
+                        <td class="py-3 px-4">Web Developer</td>
+                        <td class="py-3 px-4">IT</td>
+                        <td class="py-3 px-4">rhyzelle.salvador@gmail.com</td>
+                        <td class="py-3 px-4">
+                            <button onclick="showModal('Rhyzelle Salvador', 'Web Developer', 'IT', 'rhyzelle.salvador@gmail.com', 'Laoag City, Ilocos Norte', '0981235691')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- Modal -->
         <div id="employeeModal" class="fixed inset-0 hidden items-center justify-center bg-gray-800 bg-opacity-50">
             <div class="bg-white rounded-lg p-6 max-w-sm w-full">
-                <h2 class="text-lg font-bold" id="modalName">Employee Information</h2>
+                <h2 class="text-xl font-semibold text-indigo-600 mb-4" id="modalName">Employee Information</h2>
                 <p><strong>Name:</strong> <span id="modalNameContent"></span></p>
                 <p><strong>Job Title:</strong> <span id="modalJobTitle"></span></p>
                 <p><strong>Department:</strong> <span id="modalDepartment"></span></p>
@@ -172,20 +155,15 @@
             document.getElementById('modalPhone').textContent = phone;
             document.getElementById('modalAddress').textContent = address;
 
-            document.getElementById('employeeModal').classList.remove('hidden');
+            // Show the modal
+            document.getElementById('employeeModal').classList.add('active');
         }
 
-        // Close the employee modal
+        // Hide employee modal
         function closeModal() {
-            document.getElementById('employeeModal').classList.add('hidden');
+            document.getElementById('employeeModal').classList.remove('active');
         }
-
-        // Trigger fade-in animation for the employee list on page load
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById('employeeTableBody').style.opacity = 1;
-        });
-
     </script>
 </body>
+
 </html>
->>>>>>> Stashed changes
