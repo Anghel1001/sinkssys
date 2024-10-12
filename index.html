@@ -14,6 +14,34 @@
         #employeeModal.active {
             display: flex;
         }
+
+        /* background enhancements */
+        #loginPage {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://example.com/background-image.jpg') center/cover no-repeat;
+        }
+
+        /* Gradient background for employee list page */
+        #employeeListPage {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+        }
+
+        /* Add animation for the login background */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #employeeListPage {
+            animation: gradientAnimation 5s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        /* Add a soft blur effect */
+        .blur-bg {
+            backdrop-filter: blur(8px);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
